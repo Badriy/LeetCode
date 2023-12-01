@@ -1,0 +1,28 @@
+class Solution:
+    def sumOddLengthSubarrays(self, arr):
+       
+        total_sum = 0
+      
+        
+        n = len(arr)
+      
+        
+        for start_index in range(n):
+            
+            subarray_sum = 0
+          
+            
+            for end_index in range(start_index, n):
+               
+                subarray_sum += arr[end_index]
+              
+                
+                subarray_length = end_index - start_index + 1
+              
+                
+                if subarray_length % 2 == 1:
+                   
+                    total_sum += subarray_sum
+      
+        
+        return total_sum
