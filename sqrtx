@@ -1,0 +1,12 @@
+class Solution:
+    def mySqrt(self, x):
+       
+        left_boundary, right_boundary = 0, x
+      
+        
+        while left_boundary < right_boundary:
+            
+            mid = (left_boundary + right_boundary + 1) >> 1
+          
+           
+            if mid <= x // mid:
